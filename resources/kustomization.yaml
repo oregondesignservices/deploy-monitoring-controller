@@ -6,3 +6,7 @@ resources:
 - crd.yaml
 - deployment.yaml
 - serviceaccount.yaml
+images:
+- name: morphicworld/monitoring-controller
+  newName: morphicworld/monitoring-controller
+  newTag: stable-20200801.2
