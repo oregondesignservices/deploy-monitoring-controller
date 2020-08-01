@@ -1,0 +1,40 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: monitoring-controller
+  namespace: monitoring
+  labels:
+    app: monitoring-controller
+  annotations:
+    reloader.stakater.com/auto: "true"
+spec:
+  revisionHistoryLimit: 1
+  replicas: 1
+  selector:
+    matchLabels:
+      app: monitoring-controller
+  template:
+    metadata:
+      labels:
+        app: monitoring-controller
+      annotations:
+        prometheus.io/scrape: "true"
+        prometheus.io/port: "8080"
+    spec:
+      serviceAccountName: monitoring-controller
+      containers:
+        - name: monitoring-controller
+          image: morphicworld/monitoring-controller:stable
+          livenessProbe:
+            httpGet:
+              path: /metrics
+              port: 8080
+            initialDelaySeconds: 3
+            periodSeconds: 30
+            timeoutSeconds: 2
+            failureThreshold: 4
+            successThreshold: 1
+          ports:
+            - name: http
+              containerPort: 8080
+          env: []
