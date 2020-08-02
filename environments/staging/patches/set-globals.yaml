@@ -8,7 +8,7 @@ spec:
     spec:
       containers:
         - name: monitoring-controller
-          command:
+          args:
             - "--set-var"
             - "WEB_URL=https://app.morphic-staging.com"
             - "--set-var"

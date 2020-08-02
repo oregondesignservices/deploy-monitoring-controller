@@ -8,7 +8,7 @@ spec:
     spec:
       containers:
         - name: monitoring-controller
-          command:
+          args:
             - "--set-var"
             - "WEB_URL=https://dev-ui.morphiclite-oregondesignservices.org"
             - "--set-var"
