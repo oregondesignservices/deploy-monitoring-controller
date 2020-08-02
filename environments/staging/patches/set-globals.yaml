@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: monitoring-controller
+  namespace: monitoring
+spec:
+  template:
+    spec:
+      containers:
+        - name: monitoring-controller
+          command:
+            - "--set-var"
+            - "WEB_URL=https://app.morphic-staging.com"
+            - "--set-var"
+            - "API_URL=https://api.morphic-staging.com"
+            - "--set-var"
+            - "COMMUNITY_URL=https://community.morphic-staging.com"
+            - "--set-var"
+            - "GRAFANA_URL=https://grafana.morphic-staging.com"
+            - "--set-var"
+            - "COUNTLY_URL=https://countly.morphic-staging.com"
