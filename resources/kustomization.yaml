@@ -10,4 +10,4 @@ resources:
 images:
 - name: morphicworld/monitoring-controller
   newName: morphicworld/monitoring-controller
-  newTag: "20200802.6"
+  newTag: "20200802.7"
