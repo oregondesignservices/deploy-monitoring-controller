@@ -10,12 +10,12 @@ spec:
         - name: monitoring-controller
           args:
             - "--set-var"
-            - "WEB_URL=https://app.morphic-prod-test.org"
+            - "WEB_URL=https://app.test.morphic.org"
             - "--set-var"
-            - "API_URL=https://api.morphic-prod-test.org"
+            - "API_URL=https://api.test.morphic.org"
             - "--set-var"
-            - "COMMUNITY_URL=https://community.morphic-prod-test.org"
+            - "COMMUNITY_URL=https://community.test.morphic.org"
             - "--set-var"
-            - "GRAFANA_URL=https://grafana.morphic-prod-test.org"
+            - "GRAFANA_URL=https://grafana.test.morphic.org"
             - "--set-var"
-            - "COUNTLY_URL=https://countly.morphic-prod-test.org"
+            - "COUNTLY_URL=https://countly.test.morphic.org"
