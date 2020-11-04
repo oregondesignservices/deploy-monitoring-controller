@@ -10,12 +10,12 @@ spec:
         - name: monitoring-controller
           args:
             - "--set-var"
-            - "WEB_URL=https://dev-ui.morphiclite-oregondesignservices.org"
+            - "WEB_URL=https://app.morphic.dev"
             - "--set-var"
-            - "API_URL=https://dev-morphic.morphiclite-oregondesignservices.org"
+            - "API_URL=https://api.morphic.dev"
             - "--set-var"
-            - "COMMUNITY_URL=https://dev-community.morphiclite-oregondesignservices.org"
+            - "COMMUNITY_URL=https://community.morphic.dev"
             - "--set-var"
-            - "GRAFANA_URL=https://dev-grafana.morphiclite-oregondesignservices.org"
+            - "GRAFANA_URL=https://grafana.morphic.dev"
             - "--set-var"
-            - "COUNTLY_URL=https://dev-countly.morphiclite-oregondesignservices.org"
+            - "COUNTLY_URL=https://countly.morphic.dev"
